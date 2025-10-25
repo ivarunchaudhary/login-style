@@ -120,11 +120,11 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen animated-gradient flex items-center justify-center">
       <motion.div
-        initial={{ x: -100, opacity: 0 }}
+        initial={{ x: "-100vw", opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
-        exit={{ x: 100, opacity: 0 }}
-        transition={{ type: "spring", stiffness: 100, damping: 20 }}
-        className="w-full max-w-md bg-white/90 rounded-3xl pt-12 pr-10 pb-12 pl-10 shadow-2xl"
+        exit={{ x: "100vw", opacity: 0 }}
+        transition={{ type: "spring", stiffness: 80, damping: 20, duration: 0.6 }}
+        className="w-full max-w-md bg-white/90 rounded-3xl pt-12 pr-10 pb-12 pl-10 shadow-soft-card"
       >
         <div className="text-center mb-8">
           <svg
@@ -361,7 +361,7 @@ export default function LoginPage() {
           </div>
           <button
             type="submit"
-            className="w-full py-3 rounded-lg bg-indigo-500 hover:bg-indigo-600 text-white font-semibold shadow-lg transition"
+            className="w-full py-3 rounded-lg bg-indigo-500 hover:bg-indigo-600 text-white font-semibold shadow-soft-btn transition"
           >
             Sign In
           </button>
