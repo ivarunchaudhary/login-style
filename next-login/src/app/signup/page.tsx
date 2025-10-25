@@ -25,17 +25,17 @@ export default function SignUpPage() {
   };
 
   return (
-    <div className="min-h-screen animated-gradient flex items-center justify-center p-4">
+    <div className="min-h-screen animated-gradient flex items-center justify-center px-4 py-6">
       <motion.div
         initial={{ x: "100vw", opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         exit={{ x: "-100vw", opacity: 0 }}
         transition={{ type: "spring", stiffness: 80, damping: 20, duration: 0.6 }}
-        className="w-full max-w-md bg-white/90 rounded-3xl pt-12 pr-10 pb-12 pl-10 shadow-2xl"
+        className="w-full max-w-md bg-white/90 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 shadow-soft-card"
       >
-        <div className="text-center mb-8">
+        <div className="text-center mb-4 sm:mb-5">
           <svg
-            className="mx-auto mb-4 h-14 w-14 text-indigo-500"
+            className="mx-auto mb-2 sm:mb-3 h-10 w-10 sm:h-12 sm:w-12 text-indigo-500"
             fill="none"
             stroke="currentColor"
             strokeWidth="1.5"
@@ -47,13 +47,13 @@ export default function SignUpPage() {
               d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM3 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 019.374 21c-2.331 0-4.512-.645-6.374-1.766z"
             ></path>
           </svg>
-          <h2 className="text-2xl font-bold text-gray-800">Create Account</h2>
-          <p className="text-gray-500 mt-1">Sign up to get started</p>
+          <h2 className="text-lg sm:text-xl font-bold text-gray-800">Create Account</h2>
+          <p className="text-xs sm:text-sm text-gray-500 mt-0.5">Sign up to get started</p>
         </div>
         <form onSubmit={handleSubmit}>
-          <div className="mb-6">
+          <div className="mb-3 sm:mb-4">
             <label
-              className="block mb-2 text-gray-700 font-semibold"
+              className="block mb-1.5 sm:mb-2 text-xs sm:text-sm text-gray-700 font-semibold"
               htmlFor="fullname"
             >
               Full Name
@@ -63,13 +63,13 @@ export default function SignUpPage() {
               name="fullname"
               type="text"
               required
-              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-indigo-500 transition"
+              className="w-full px-3 sm:px-4 py-2 sm:py-2.5 text-sm sm:text-base rounded-lg border border-gray-300 focus:outline-none focus:border-indigo-500 transition"
               placeholder="Enter your full name"
             />
           </div>
-          <div className="mb-6">
+          <div className="mb-3 sm:mb-4">
             <label
-              className="block mb-2 text-gray-700 font-semibold"
+              className="block mb-1.5 sm:mb-2 text-xs sm:text-sm text-gray-700 font-semibold"
               htmlFor="email"
             >
               Email
@@ -79,13 +79,13 @@ export default function SignUpPage() {
               name="email"
               type="email"
               required
-              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-indigo-500 transition"
+              className="w-full px-3 sm:px-4 py-2 sm:py-2.5 text-sm sm:text-base rounded-lg border border-gray-300 focus:outline-none focus:border-indigo-500 transition"
               placeholder="Enter your email"
             />
           </div>
-          <div className="mb-6">
+          <div className="mb-3 sm:mb-4">
             <label
-              className="block mb-2 text-gray-700 font-semibold"
+              className="block mb-1.5 sm:mb-2 text-xs sm:text-sm text-gray-700 font-semibold"
               htmlFor="username"
             >
               Username
@@ -95,13 +95,13 @@ export default function SignUpPage() {
               name="username"
               type="text"
               required
-              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-indigo-500 transition"
+              className="w-full px-3 sm:px-4 py-2 sm:py-2.5 text-sm sm:text-base rounded-lg border border-gray-300 focus:outline-none focus:border-indigo-500 transition"
               placeholder="Choose a username"
             />
           </div>
-          <div className="mb-6">
+          <div className="mb-3 sm:mb-4">
             <label
-              className="block mb-2 text-gray-700 font-semibold"
+              className="block mb-1.5 sm:mb-2 text-xs sm:text-sm text-gray-700 font-semibold"
               htmlFor="password"
             >
               Password
@@ -112,19 +112,19 @@ export default function SignUpPage() {
                 name="password"
                 type={passwordVisible ? "text" : "password"}
                 required
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-indigo-500 transition pr-12"
+                className="w-full px-3 sm:px-4 py-2 sm:py-2.5 text-sm sm:text-base rounded-lg border border-gray-300 focus:outline-none focus:border-indigo-500 transition pr-10 sm:pr-12"
                 placeholder="Create a password"
               />
               <button
                 type="button"
                 onClick={togglePasswordVisibility}
                 tabIndex={-1}
-                className="absolute right-3 top-1/2 -translate-y-1/2 p-1 text-indigo-500 hover:text-indigo-700 focus:outline-none"
+                className="absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 p-1 text-indigo-500 hover:text-indigo-700 focus:outline-none"
               >
                 {!passwordVisible ? (
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6"
+                    className="h-5 w-5 sm:h-6 sm:w-6"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -145,7 +145,7 @@ export default function SignUpPage() {
                 ) : (
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6"
+                    className="h-5 w-5 sm:h-6 sm:w-6"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -161,9 +161,9 @@ export default function SignUpPage() {
               </button>
             </div>
           </div>
-          <div className="mb-6">
+          <div className="mb-3 sm:mb-4">
             <label
-              className="block mb-2 text-gray-700 font-semibold"
+              className="block mb-1.5 sm:mb-2 text-xs sm:text-sm text-gray-700 font-semibold"
               htmlFor="confirmPassword"
             >
               Confirm Password
@@ -174,19 +174,19 @@ export default function SignUpPage() {
                 name="confirmPassword"
                 type={confirmPasswordVisible ? "text" : "password"}
                 required
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-indigo-500 transition pr-12"
+                className="w-full px-3 sm:px-4 py-2 sm:py-2.5 text-sm sm:text-base rounded-lg border border-gray-300 focus:outline-none focus:border-indigo-500 transition pr-10 sm:pr-12"
                 placeholder="Confirm your password"
               />
               <button
                 type="button"
                 onClick={toggleConfirmPasswordVisibility}
                 tabIndex={-1}
-                className="absolute right-3 top-1/2 -translate-y-1/2 p-1 text-indigo-500 hover:text-indigo-700 focus:outline-none"
+                className="absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 p-1 text-indigo-500 hover:text-indigo-700 focus:outline-none"
               >
                 {!confirmPasswordVisible ? (
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6"
+                    className="h-5 w-5 sm:h-6 sm:w-6"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -207,7 +207,7 @@ export default function SignUpPage() {
                 ) : (
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6"
+                    className="h-5 w-5 sm:h-6 sm:w-6"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -223,14 +223,14 @@ export default function SignUpPage() {
               </button>
             </div>
           </div>
-          <div className="flex items-center mb-6">
+          <div className="flex items-center mb-3 sm:mb-4">
             <input
               id="terms"
               type="checkbox"
               required
               className="accent-indigo-500"
             />
-            <label htmlFor="terms" className="ml-2 text-sm text-gray-600">
+            <label htmlFor="terms" className="ml-2 text-xs sm:text-sm text-gray-600">
               I agree to the{" "}
               <a href="#" className="text-indigo-500 hover:underline">
                 Terms & Conditions
@@ -239,12 +239,12 @@ export default function SignUpPage() {
           </div>
           <button
             type="submit"
-            className="w-full py-3 rounded-lg bg-indigo-500 hover:bg-indigo-600 text-white font-semibold shadow-lg transition"
+            className="w-full py-2 sm:py-2.5 text-sm sm:text-base rounded-lg bg-indigo-500 hover:bg-indigo-600 text-white font-semibold shadow-soft-btn transition"
           >
             Sign Up
           </button>
         </form>
-        <p className="mt-8 text-center text-gray-500 text-sm">
+        <p className="mt-4 sm:mt-5 text-center text-gray-500 text-xs sm:text-sm">
           Already have an account?{" "}
           <Link
             href="/"
